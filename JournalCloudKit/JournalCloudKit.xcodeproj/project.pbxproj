@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		349BA28624329EE200E4B507 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BA28524329EE200E4B507 /* DateExtension.swift */; };
+		349BA2882432A82600E4B507 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BA2872432A82600E4B507 /* EntryDetailViewController.swift */; };
+		349BA28A2432A83D00E4B507 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BA2892432A83D00E4B507 /* EntryListTableViewController.swift */; };
 		34F8A61B24328EA5003C4924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F8A61A24328EA5003C4924 /* AppDelegate.swift */; };
 		34F8A61D24328EA5003C4924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F8A61C24328EA5003C4924 /* SceneDelegate.swift */; };
 		34F8A62224328EA5003C4924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F8A62024328EA5003C4924 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		349BA28524329EE200E4B507 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		349BA2872432A82600E4B507 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		349BA2892432A83D00E4B507 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
 		34F8A61724328EA5003C4924 /* JournalCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F8A61A24328EA5003C4924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34F8A61C24328EA5003C4924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		34F8A63524328F43003C4924 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				349BA2872432A82600E4B507 /* EntryDetailViewController.swift */,
+				349BA2892432A83D00E4B507 /* EntryListTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -211,9 +217,11 @@
 			files = (
 				34F8A63824328F61003C4924 /* Entry.swift in Sources */,
 				349BA28624329EE200E4B507 /* DateExtension.swift in Sources */,
+				349BA28A2432A83D00E4B507 /* EntryListTableViewController.swift in Sources */,
 				34F8A63D2432968B003C4924 /* EntryError.swift in Sources */,
 				34F8A61B24328EA5003C4924 /* AppDelegate.swift in Sources */,
 				34F8A63A24329572003C4924 /* EntryController.swift in Sources */,
+				349BA2882432A82600E4B507 /* EntryDetailViewController.swift in Sources */,
 				34F8A61D24328EA5003C4924 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
