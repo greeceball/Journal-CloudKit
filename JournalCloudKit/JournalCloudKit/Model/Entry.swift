@@ -9,10 +9,10 @@
 import CloudKit
 
 struct EntryConstants{
-    static let TitleKey = "title"
-    static let BodyKey = "body"
-    static let TimestampKey = "timestamp"
-    static let RecordTypeKey = "Entry"
+    static let titleKey = "title"
+    static let bodyKey = "body"
+    static let timestampKey = "timestamp"
+    static let recordTypeKey = "Entry"
 }
 
 class Entry {
@@ -32,18 +32,23 @@ class Entry {
 }
 extension Entry {
     convenience init?(ckRecord: CKRecord) {
-        guard let title = ckRecord[EntryConstants.TitleKey] as? String, let body = ckRecord[EntryConstants.BodyKey] as? String, let timestamp = ckRecord[EntryConstants.TimestampKey] as? Date else { return nil }
+        guard let title = ckRecord[EntryConstants.titleKey] as? String,
+            let body = ckRecord[EntryConstants.bodyKey] as? String,
+            let timestamp = ckRecord[EntryConstants.timestampKey] as? Date
+            else { return nil }
         
         self.init(title: title, body: body, timestamp: timestamp)
     }
 }
 
 extension CKRecord {
-    convenience init?(entry: Entry) {
-        
-        self.init(recordType: EntryConstants.RecordTypeKey, recordID: entry.ckRecordID)
-        self.setValue(entry.title, forKey: EntryConstants.TitleKey)
-        self.setValue(entry.body, forKey: EntryConstants.BodyKey)
-        self.setValue(entry.timestamp, forKey: EntryConstants.TimestampKey)
+    convenience init(entry: Entry) {
+        self.init(recordType: EntryConstants.recordTypeKey, recordID: entry.ckRecordID)
+        self.setValuesForKeys([
+            EntryConstants.titleKey : entry.title,
+            EntryConstants.bodyKey : entry.body,
+            EntryConstants.timestampKey : entry.timestamp
+        ])
     }
 }
+

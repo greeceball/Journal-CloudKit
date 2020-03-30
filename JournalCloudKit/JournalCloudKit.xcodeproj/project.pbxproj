@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		349BA28624329EE200E4B507 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BA28524329EE200E4B507 /* DateExtension.swift */; };
 		34F8A61B24328EA5003C4924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F8A61A24328EA5003C4924 /* AppDelegate.swift */; };
 		34F8A61D24328EA5003C4924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F8A61C24328EA5003C4924 /* SceneDelegate.swift */; };
 		34F8A62224328EA5003C4924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F8A62024328EA5003C4924 /* Main.storyboard */; };
@@ -14,9 +15,12 @@
 		34F8A62724328EA6003C4924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F8A62524328EA6003C4924 /* LaunchScreen.storyboard */; };
 		34F8A63124328ECA003C4924 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F8A63024328ECA003C4924 /* CloudKit.framework */; };
 		34F8A63824328F61003C4924 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F8A63724328F61003C4924 /* Entry.swift */; };
+		34F8A63A24329572003C4924 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F8A63924329572003C4924 /* EntryController.swift */; };
+		34F8A63D2432968B003C4924 /* EntryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F8A63C2432968B003C4924 /* EntryError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		349BA28524329EE200E4B507 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		34F8A61724328EA5003C4924 /* JournalCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F8A61A24328EA5003C4924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34F8A61C24328EA5003C4924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +31,8 @@
 		34F8A62E24328EC7003C4924 /* JournalCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalCloudKit.entitlements; sourceTree = "<group>"; };
 		34F8A63024328ECA003C4924 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		34F8A63724328F61003C4924 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		34F8A63924329572003C4924 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		34F8A63C2432968B003C4924 /* EntryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 		34F8A61924328EA5003C4924 /* JournalCloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				34F8A63B24329670003C4924 /* Error Helper + Extension */,
 				34F8A63624328F4C003C4924 /* Model */,
 				34F8A63324328F2E003C4924 /* Controllers */,
 				34F8A63224328EF6003C4924 /* Resources */,
@@ -102,6 +109,7 @@
 		34F8A63424328F3A003C4924 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				34F8A63924329572003C4924 /* EntryController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -119,6 +127,15 @@
 				34F8A63724328F61003C4924 /* Entry.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		34F8A63B24329670003C4924 /* Error Helper + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				34F8A63C2432968B003C4924 /* EntryError.swift */,
+				349BA28524329EE200E4B507 /* DateExtension.swift */,
+			);
+			path = "Error Helper + Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F8A63824328F61003C4924 /* Entry.swift in Sources */,
+				349BA28624329EE200E4B507 /* DateExtension.swift in Sources */,
+				34F8A63D2432968B003C4924 /* EntryError.swift in Sources */,
 				34F8A61B24328EA5003C4924 /* AppDelegate.swift in Sources */,
+				34F8A63A24329572003C4924 /* EntryController.swift in Sources */,
 				34F8A61D24328EA5003C4924 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
