@@ -9,16 +9,22 @@
 import UIKit
 
 class EntryListTableViewController: UITableViewController {
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        EntryController.shared.fetchEntriesWith { (result) in
+            self.updateViews()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        tableView.reloadData()
+    }
+    
+    func updateViews() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func addEntryButtonTapped(_ sender: Any) {
@@ -34,7 +40,10 @@ class EntryListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entryCell", for: indexPath)
-
+        let entry = EntryController.shared.entries[indexPath.row]
+        
+        cell.textLabel?.text = entry.title
+        cell.detailTextLabel?.text = entry.timestamp.formatDate()
 
         return cell
     }
@@ -44,6 +53,11 @@ class EntryListTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toEntryDetailVC" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let destinationVC = segue.destination as? EntryDetailViewController else { return }
+            
+            let entryToSend = EntryController.shared.entries[indexPath.row]
+            destinationVC.entry = entryToSend
             
         }
     }
